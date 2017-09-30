@@ -9,7 +9,9 @@
   },
   "scripts": {
     "start": "node server/app.js",
-    "test": "gulp test-deployed"
+    "test": "gulp test-deployed",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": "0.10.x"
@@ -40,7 +42,8 @@
     "passport-local": "^1.0.0",
     "pretty-error": "^1.1.2",
     "request": "^2.60.0",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -67,5 +70,6 @@
     "run-sequence": "^1.1.2",
     "webpack": "^1.10.5",
     "yargs": "^3.16.1"
-  }
+  },
+  "snyk": true
 }
